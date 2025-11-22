@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bedienungsanleitung: CRMX DMX-Empfänger für Nebelmaschinen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24;
+            vertical-align: middle;
+            font-size: 1.2em;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fdfdfd;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 25px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #222;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 1.5em;
+        }
+        h2 {
+            margin-top: 3em; /* Increased top margin for main sections */
+        }
+        h3 {
+            margin-top: 2.5em; /* Slightly less margin for subsections */
+        }
+        h1 {
+            text-align: center;
+            border-bottom: none;
+            font-size: 2.2em;
+            margin-bottom: 0.2em;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #6c757d;
+            margin-top: 0;
+            margin-bottom: 2em;
+            font-weight: 400;
+        }
+        .version-info {
+            text-align: center;
+            font-size: 0.9rem;
+            font-style: italic;
+            color: #6c757d;
+            margin-top: -1.5em; /* Adjust to be closer to subtitle */
+            margin-bottom: 2em;
+            font-weight: 400;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+        .logo-container img {
+            max-width: 250px;
+            height: auto;
+        }
+        .contact-info {
+            text-align: center;
+            font-style: normal;
+            margin-bottom: 2em;
+            color: #555;
+            line-height: 1.5;
+        }
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        code {
+            font-family: monospace;
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+        .notice {
+            padding: 1em;
+            margin: 1.5em 0;
+            border-left: 5px solid;
+            border-radius: 4px;
+        }
+        .notice-important {
+            background-color: #fffbe6;
+            border-color: #ffc107;
+        }
+        .notice-danger {
+            background-color: #f8d7da;
+            border-color: #dc3545;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        dt {
+            font-weight: bold;
+            margin-top: 1em;
+        }
+
+        /* --- Device Layout --- */
+        .device-layout {
+            display: flex;
+            align-items: center;
+            justify-content: space-around; /* Geändert für ausgeglichenen Abstand */
+            background-color: #383838; /* Device color */
+            border: 2px solid #222;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 400px;
+            margin: 2em auto;
+            min-height: 150px;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+        }
+        .dpad-cell, .display-cell {
+            padding: 0; /* Entfernt, um space-around wirken zu lassen */
+            flex-grow: 0; /* Wachsen nicht ungleichmäßig */
+            flex-shrink: 0; /* Schrumpfen nicht */
+            flex-basis: auto; /* Nimmt die Breite des Inhalts an */
+            text-align: center; /* Für Zentrierung innerhalb der Zelle */
+        }
+        .dpad-icon {
+            font-size: 80px !important;
+            color: #777;
+        }
+        .display-mock {
+            width: 128px; /* Fixed width based on pixel ratio */
+            aspect-ratio: 128 / 64; /* 2:1 aspect ratio */
+            background-color: #0d1b2a;
+            border: 2px solid #777;
+            border-radius: 4px;
+        }
+
+        footer {
+            margin-top: 5em; /* Large space before the footer */
+            border-top: 1px solid #ddd; /* A subtle replacement for the <hr> */
+            padding-top: 2em;
+        }
+
+        @media print {
+            body {
+                font-size: 10pt;
+                max-width: 100%;
+                border: none;
+                box-shadow: none;
+            }
+            h2 {
+                page-break-before: always;
+                margin-top: 0;
+            }
+            h1, .subtitle, h3, h4, .device-layout, .notice, table, img {
+                 page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>CRMX Fogger Remote</h1>
+        <p class="subtitle">Bedienungsanleitung für CRMX DMX-Empfänger für Nebelmaschinen</p>
+        <p class="version-info">Firmware Version: 1.6.0</p>
+        <img src="fogger_remote.jpg" alt="Produktfoto der CRMX Fogger Remote" style="width: 100%; max-width: 500px; display: block; margin: 2em auto 1em auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    </header>
+
+    <p>Herzlichen Glückwunsch zu Ihrem neuen drahtlosen DMX-Empfänger! Dieses Gerät ermöglicht es Ihnen, Ihre Nebelmaschine über das professionelle CRMX-Funkprotokoll ("CRMX Wireless DMX") von LumenRadio fernzusteuern.</p>
+
+    <h2>1. Geräteübersicht</h2>
+
+    <div class="device-layout">
+        <div class="dpad-cell">
+            <span class="material-symbols-outlined dpad-icon">gamepad</span>
+        </div>
+        <div class="display-cell">
+            <div class="display-mock"></div>
+        </div>
+    </div>
+
+    <p>Das Gerät verfügt über ein OLED-Display und ein Steuerkreuz (D-Pad) zur Navigation durch die Menüs.</p>
+    <ul>
+        <li><strong><span class="material-symbols-outlined">gamepad_up</span> / <span class="material-symbols-outlined">gamepad_down</span>:</strong> Ändern von Werten oder Auslösen von Aktionen.</li>
+        <li><strong><span class="material-symbols-outlined">gamepad_left</span> / <span class="material-symbols-outlined">gamepad_right</span>:</strong> Navigation durch das Menü.</li>
+    </ul>
+
+    <h2>2. Technische Daten & Montage</h2>
+    <ul>
+        <li><strong>Abmessungen (LxBxH):</strong> 102 mm x 72 mm x 45 mm</li>
+        <li><strong>Gewicht:</strong> 220 g</li>
+        <li><strong>Stromversorgung:</strong> 12V DC (Betrieb), (min. 7V, max. 35V). Intern: L7805CV 5V Regulator.</li>
+        <li><strong>Stromverbrauch:</strong> ca. 42 mA (bei 12V DC)</li>
+        <li><strong>Unterstützte Funkprotokolle:</strong> CRMX², CRMX Classic, Wireless Solution G3, G4, G4S, G5 (2.4GHz)</li>
+        <li><strong>Kompatibilität:</strong> Kompatibel mit allen Geräten, die einen 0-10V Eingang zur Steuerung besitzen und eine Spannungsversorgung von 7-35V bieten.
+            <div class="notice notice-important" style="margin-top: 10px;">
+                <strong>Hinweis:</strong> Beachten Sie unbedingt die <a href="#anschlussbelegung">korrekte Pinbelegung</a>, da diese je nach Hersteller variieren kann.
+            </div>
+        </li>
+    </ul>
+
+    <h3 id="anschlussbelegung">Anschlussbelegung (XLR)</h3>
+    <p>Das Gerät wird über einen 3-poligen XLR-Anschluss verbunden. Die Pinbelegung ist wie folgt:</p>
+    <ul>
+        <li>Pin 1: <code>GND / Masse</code></li>
+        <li>Pin 2: <code>0-10V DC Steuersignal</code></li>
+        <li>Pin 3: <code>12V DC Versorgungsspannung</code></li>
+    </ul>
+    <img src="XLR_pinouts_de.svg" alt="Grafische Darstellung der XLR-Pinbelegung" style="max-width: 350px; display: block; margin: 1.5em auto; border-radius: 6px; background-color: #f2f2f2; padding: 10px;">
+    <p style="text-align: center; font-size: 0.8em; color: #6c757d; margin-top: -1em;">
+        Quelle: <a href="https://de.wikipedia.org/wiki/Datei:XLR_pinouts_de.svg" target="_blank" rel="noopener">Wikipedia</a>
+    </p>
+    <div class="notice notice-danger">
+       <strong>ACHTUNG:</strong> Eine falsche Verkabelung oder Verpolung kann zu irreparablen Schäden am DMX-Empfänger und/oder an der Nebelmaschine führen! Überprüfen Sie die Verkabelung sorgfältig.
+    </div>
+
+    <h3>Montage</h3>
+    <p>Auf der Rückseite des Geräts befinden sich zwei Gewindebohrungen (M4) zur Befestigung.</p>
+    <img src="befestigung.svg" alt="Maximale Einschraubtiefe M4 Gewinde 18mm" style="max-width: 350px; display: block; margin: 1.5em auto;">
+    <div class="notice notice-important">
+        <strong>WICHTIGER HINWEIS:</strong> Die maximale Einschraubtiefe für die M4-Schrauben beträgt <strong>18 mm</strong>. Die Verwendung längerer Schrauben kann zu irreparablen Schäden an der internen Elektronik führen!
+    </div>
+
+    <h2 id="erste-schritte">3. Erste Schritte</h2>
+    <ol>
+        <li>
+            <strong>Antenne anschließen:</strong> Stellen Sie sicher, dass die externe Antenne fest am dafür vorgesehenen Anschluss (IPEX/u.FL) angeschlossen ist. Der Empfang ist für die externe Antenne optimiert.
+        </li>
+        <li>
+            <strong>Nebelmaschine verbinden:</strong> Schließen Sie das Gerät über den XLR-Stecker an Ihre Akku-Nebelmaschine an. Diese Verbindung versorgt das Gerät mit Strom und stellt die Signalverbindung her.
+            <div class="notice notice-important" style="margin-top: 10px;">
+                <strong>Wichtig:</strong> Überprüfen Sie vor dem Anschließen, ob die Pinbelegung Ihrer Nebelmaschine mit der des Empfängers übereinstimmt. Eine detaillierte Beschreibung der Pinbelegung finden Sie im Abschnitt <a href="#anschlussbelegung">Anschlussbelegung</a>.
+            </div>
+            <p>Nach dem Anschließen startet das Gerät und zeigt den Hauptbildschirm an.</p>
+        </li>
+        <li>
+            <strong>Mit Sender verbinden (Linking):</strong> Koppeln Sie das Gerät mit Ihrem CRMX-Sender. Eine detaillierte Anleitung finden Sie im Abschnitt <a href="#linking">"Mit einem Sender verbinden"</a>.
+        </li>
+        <li>
+            <strong>DMX-Adresse einstellen:</strong> Stellen Sie die gewünschte DMX-Startadresse am Gerät ein. Die zuletzt verwendete Adresse wird automatisch geladen. Details dazu finden Sie im Abschnitt <a href="#dmx-address">"DMX-Adresse einstellen"</a>.
+        </li>
+    </ol>
+
+    <h2 id="display">4. Das Display</h2>
+    <p>Das Display ist in zwei Bereiche unterteilt: die Statusleiste oben und den Hauptbereich in der Mitte.</p>
+    <h3>Die Statusleiste (oben)</h3>
+    <p>Die Statusleiste zeigt jederzeit die wichtigsten Informationen an:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Anzeige links</th>
+                <th>Bedeutung</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>not paired</code></td>
+                <td>Das Gerät ist mit keinem Sender verbunden (gelinkt).</td>
+            </tr>
+            <tr>
+                <td><code>No Link</code></td>
+                <td>Das Gerät ist gelinkt, sucht aber nach dem Sender.</td>
+            </tr>
+            <tr>
+                <td><code>No DMX</code></td>
+                <td>Das Gerät ist mit dem Sender verbunden, empfängt aber kein DMX-Signal.</td>
+            </tr>
+             <tr>
+                <td><code>[Universumsname]</code></td>
+                <td>Das Gerät ist verbunden und empfängt DMX. Der Name des Senders/Universums wird angezeigt.</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Rechts in der Statusleiste sehen Sie:</p>
+    <ul>
+        <li><strong>Signalstärke-Symbol:</strong> Zeigt die Qualität der Funkverbindung an (0 bis 4 Balken).</li>
+        <li><strong>Schloss-Symbol:</strong> Erscheint, wenn die Tastensperre aktiv ist.</li>
+    </ul>
+    <p style="margin-top: 1.5em;">Hier sind einige Beispiele, wie die Statusleiste aussehen kann:</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; background-color: #f9f9f9; border: 1px solid #eee; padding: 15px; border-radius: 5px; font-family: 'Courier New', monospace;">
+        <!-- Beispiel 1: not paired -->
+        <div style="border: 2px solid #777; background-color: #0d1b2a; color: white; padding: 8px; border-radius: 4px; width: 200px; box-sizing: border-box;">
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 14px;">
+                <span>not paired</span>
+                <span class="material-symbols-outlined" style="font-size: 18px;">signal_cellular_4_bar</span>
+            </div>
+            <hr style="border-color: #555; margin: 4px 0; border-style: solid;">
+        </div>
+        <!-- Beispiel 2: No Link -->
+        <div style="border: 2px solid #777; background-color: #0d1b2a; color: white; padding: 8px; border-radius: 4px; width: 200px; box-sizing: border-box;">
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 14px;">
+                <span>No Link</span>
+                <span class="material-symbols-outlined" style="font-size: 18px;">signal_cellular_0_bar</span>
+            </div>
+            <hr style="border-color: #555; margin: 4px 0; border-style: solid;">
+        </div>
+        <!-- Beispiel 3: Verbunden mit Schloss -->
+        <div style="border: 2px solid #777; background-color: #0d1b2a; color: white; padding: 8px; border-radius: 4px; width: 200px; box-sizing: border-box;">
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 14px;">
+                <span>MyUniverse</span>
+                <span class="material-symbols-outlined" style="font-size: 18px;">signal_cellular_4_bar</span>
+            </div>
+            <hr style="border-color: #555; margin: 4px 0; border-style: solid;">
+            <div style="text-align: right;">
+                <span class="material-symbols-outlined" style="font-size: 18px;">lock</span>
+            </div>
+        </div>
+    </div>
+
+    <h3>Der Hauptbildschirm (Startseite)</h3>
+    <p>Dies ist die Standardansicht. Sie zeigt:</p>
+    <ul>
+        <li><strong>Große Zahl:</strong> Die aktuell eingestellte DMX-Startadresse.</li>
+        <li><strong>Balken unten:</strong> Die aktuelle Nebel-Ausgabeleistung (0-100%), die per DMX empfangen wird und anzeigt, wie hoch der Nebeloutput aktuell sein sollte.</li>
+    </ul>
+    <p style="margin-top: 1.5em;">Ein Beispiel für den Hauptbildschirm im Betrieb:</p>
+    <div style="border: 2px solid #777; background-color: #0d1b2a; color: white; padding: 8px; border-radius: 4px; max-width: 250px; margin: 1.5em auto; font-family: 'Courier New', monospace;">
+        <!-- Statusleiste -->
+        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 14px;">
+            <span>MyUniverse</span>
+            <span class="material-symbols-outlined" style="font-size: 18px;">signal_cellular_4_bar</span>
+        </div>
+        <hr style="border-color: #555; margin: 4px 0; border-style: solid;">
+        
+        <!-- Hauptinhalt -->
+        <div style="font-size: 3.5em; text-align: center; font-weight: bold; margin: 5px 0 -5px 0;">
+            24
+        </div>
+    
+        <!-- Balken -->
+        <div style="width: 100%; height: 12px; border: 1px solid white; border-radius: 2px; margin-top: 10px; position: relative; box-sizing: border-box;">
+            <div style="width: 75%; height: 100%; background-color: white; border-radius: 1px;"></div>
+        </div>
+    </div>
+
+    <h2>5. Das Menü bedienen</h2>
+    <p>Navigieren Sie mit den <strong>LINKS</strong> <span class="material-symbols-outlined">gamepad_left</span> und <strong>RECHTS</strong> <span class="material-symbols-outlined">gamepad_right</span> Tasten des Steuerkreuzes durch die folgenden Menüpunkte.</p>
+    <dl>
+        <dt>Startseite</dt>
+        <dd>Zeigt die DMX-Adresse und die aktuelle Ausgabeleistung an.</dd>
+        <dt>DMX-Adresse</dt>
+        <dd>Hier stellen Sie die DMX-Startadresse (1-512) ein.</dd>
+        <dt>CRMX Link</dt>
+        <dd>Hier verbinden (linken) oder trennen (unlinken) Sie das Gerät mit einem Sender.</dd>
+        <dt>Universe Name</dt>
+        <dd>Zeigt den Namen des verbundenen Senders/Universums an (nur Anzeige).</dd>
+        <dt>Firmware</dt>
+        <dd>Zeigt die installierte Firmware-Version an (z.B. 1.6.0).</dd>
+    </dl>
+    
+    <h2>6. Wichtige Funktionen im Detail</h2>
+    <h3 id="dmx-address">DMX-Adresse einstellen</h3>
+    <ul>
+        <li>Navigieren Sie zum Menüpunkt "DMX-Adresse".</li>
+        <li>Drücken Sie die <strong>HOCH</strong> <span class="material-symbols-outlined">gamepad_up</span>- oder <strong>RUNTER</strong> <span class="material-symbols-outlined">gamepad_down</span>-Taste, um die Adresse zu ändern.</li>
+        <li>Halten Sie die Taste gedrückt, um die Werte schneller zu ändern.</li>
+        <li><strong>Speichern:</strong> Die Adresse wird automatisch gespeichert, wenn Sie 20 Sekunden lang keine Taste drücken oder wenn Sie mit LINKS <span class="material-symbols-outlined">gamepad_left</span> / RECHTS <span class="material-symbols-outlined">gamepad_right</span> zu einem anderen Menüpunkt wechseln. Nach dem Speichern springt die Anzeige zurück zur Startseite.</li>
+    </ul>
+
+    <h3 id="linking">Mit einem Sender verbinden (Linking)</h3>
+    <p>Solange der Empfänger nicht mit einem Sender verbunden ist (Anzeige <code>not paired</code> in der Statusleiste), ist er automatisch bereit für einen neuen Verbindungsvorgang.</p>
+    <ol>
+        <li>Aktivieren Sie den Linking-Modus an Ihrem CRMX-Sender (beachten Sie hierzu die Anleitung des Senders).</li>
+        <li>Der Empfänger erkennt den suchenden Sender und stellt die Verbindung automatisch her. Es ist keine weitere Aktion am Empfänger nötig.</li>
+        <li>Nach erfolgreicher Verbindung wechselt der Status in der Statusleiste (z.B. zu "No DMX" oder dem Sendernamen).</li>
+    </ol>
+
+    <h3>Verbindung zu einem Sender trennen (Unlink)</h3>
+    <ul>
+        <li>Navigieren Sie zum Menüpunkt "CRMX Link".</li>
+        <li>Wenn das Gerät verbunden ist, steht auf dem Display "UNLINK".</li>
+        <li>Halten Sie die <strong>HOCH</strong> <span class="material-symbols-outlined">gamepad_up</span>- oder <strong>RUNTER</strong> <span class="material-symbols-outlined">gamepad_down</span>-Taste für 2 Sekunden gedrückt.</li>
+        <li>Ein Countdown erscheint. Halten Sie die Taste weiter gedrückt, bis ein Haken-Symbol den erfolgreichen Unlink bestätigt.</li>
+        <li>Lassen Sie die Taste los. Das Gerät ist nun von dem Sender getrennt.</li>
+    </ul>
+
+    <h3>Tastensperre</h3>
+    <p>Die Tasten werden automatisch nach 30 Sekunden Inaktivität gesperrt, um versehentliche Änderungen zu verhindern. Ein Schloss-Symbol erscheint in der Statusleiste.</p>
+    <p>So entsperren Sie das Gerät:</p>
+    <ol>
+        <li>Halten Sie die <strong>LINKS</strong> <span class="material-symbols-outlined">gamepad_left</span>-Taste für 2 Sekunden gedrückt. Ein Countdown und ein Pfeil-Symbol nach links erscheinen.</li>
+        <li>Lassen Sie die <strong>LINKS</strong> <span class="material-symbols-outlined">gamepad_left</span>-Taste los. Auf dem Display erscheint nun ein Pfeil-Symbol nach rechts.</li>
+        <li>Drücken Sie jetzt einmal kurz die <strong>RECHTS</strong> <span class="material-symbols-outlined">gamepad_right</span>-Taste.</li>
+        <li>Die Tastensperre ist deaktiviert.</li>
+    </ol>
+
+    <h2>7. Fehlerbehebung</h2>
+    <dl>
+        <dt>Display zeigt "ERROR: TiMo not responding"</dt>
+        <dd>Das interne Funkmodul antwortet nicht. Bitte starten Sie das Gerät neu. Wenn der Fehler bestehen bleibt, kontaktieren Sie den Support.</dd>
+        <dt>Status ist "No Link"</dt>
+        <dd>Der Empfänger findet den gekoppelten Sender nicht. Überprüfen Sie, ob der Sender eingeschaltet und in Reichweite ist.</dd>
+        <dt>Status ist "No DMX"</dt>
+        <dd>Die Funkverbindung steht, aber der Sender gibt kein DMX-Signal aus. Überprüfen Sie die DMX-Quelle am Sender.</dd>
+        <dt>Nebelmaschine reagiert nicht</dt>
+        <dd>
+            <ol style="padding-left: 20px;">
+                <li>
+                    <strong>Verkabelung prüfen:</strong> Stellen Sie sicher, dass das Gerät korrekt mit der Nebelmaschine verbunden ist. Die Pinbelegung finden Sie im Abschnitt <a href="#erste-schritte">"Erste Schritte"</a>.
+                </li>
+                <li>
+                    <strong>Funkverbindung prüfen:</strong> Überprüfen Sie, ob eine stabile Funkverbindung zum Sender besteht (siehe Signalstärke-Anzeige in der Statusleiste). Ohne aktive Verbindung ist der Nebel-Output immer 0% (das Gerät hat keinen "DMX-Hold").
+                </li>
+                <li>
+                    <strong>DMX-Adresse prüfen:</strong> Vergleichen Sie die eingestellte DMX-Startadresse am Empfänger mit dem Wert, der vom Lichtpult gesendet wird.
+                </li>
+            </ol>
+        </dd>
+    </dl>
+
+    <footer>
+        <div class="logo-container">
+            <img src="logo_oulinepath.svg" alt="Firmenlogo">
+        </div>
+        <div class="contact-info">
+            <p>
+                Michael Stöckle<br>
+                <em>Veranstaltungstechnik & Informatik</em><br>
+                Wolfbühl 7, 88167 Maierhöfen
+            </p>
+            <p>
+                <a href="mailto:mehlbox@mstoeckle.de">mehlbox@mstoeckle.de</a> |
+                <a href="https://www.mstoeckle.de" target="_blank" rel="noopener">www.mstoeckle.de</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
